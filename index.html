@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vundela Sravan - Resume</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="loader-wrapper">
+        <img src="loader.gif" alt="Loading..." class="loader-img">
+        <p class="loader-text">Welcome to My Profile</p>
+    </div>
+    <div id="content" style="display: none;">
+        <header>
+            <div class="header-left">
+                <h1 class="fade-in">Vundela Sravan Sri Siva Kumar Reddy</h1>
+                <p class="fade-in">BTech 1st Year | Web Developer</p>
+            </div>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="header-right">
+                <img src="Profile.jpg" alt="Your Profile" class="profile-img">
+            </div>
+        </header>
+
+        <section id="about" class="fade-in">
+            <h2>About Me</h2>
+            <p>I am a passionate web designer and developer currently studying BTech at Amrita University.</p>
+        </section>
+
+        <section id="skills" class="fade-in">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>React.js</li>
+            </ul>
+        </section>
+
+        <section id="projects" class="fade-in">
+            <h2>Projects</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Project Number</th>
+                        <th>Project Name</th>
+                        <th>Project Link</th>
+                        <th>Project Description</th>
+                    </tr>
+                </thead>
+                <tbody id="projects-table-body"></tbody>
+                <!-- Project rows will be dynamically added here -->
+                </tbody>
+            </table>
+        </section>
+
+        <section id="contact" class="fade-in">
+            <h2>Contact Me</h2>
+            <p>Email: Sonofgopall@gmail.com</p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/vssskr" target="_blank" rel="noopener noreferrer">View
+                    Profile</a></p>
+            <p>Instagram: <a href="https://www.instagram.com/mr._.chinnu_56/profilecard/?igsh=MWIyZ2dzY2NvNmdlcg=="
+                    target="_blank" rel="noopener noreferrer">Visit Instagram</a></p>
+        </section>
+        <br>
+        <br>
+        <footer>
+            <p>&copy; 2025 Vundela Sravan Sri Siva Kumar Reddy | Profile Page | Skills & Activities</p>
+        </footer>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const elements = document.querySelectorAll(".fade-in");
+            elements.forEach(el => {
+                el.style.opacity = 0;
+                el.style.transform = "translateY(20px)";
+                el.style.transition = "opacity 1s ease-out, transform 1s ease-out";
+            });
+
+            function reveal() {
+                elements.forEach(el => {
+                    const rect = el.getBoundingClientRect();
+                    if (rect.top < window.innerHeight * 0.9) {
+                        el.style.opacity = 1;
+                        el.style.transform = "translateY(0)";
+                    }
+                });
+            }
+
+            window.addEventListener("scroll", reveal);
+            reveal();
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const projects = [
+                {
+                    number: 1,
+                    name: "AVVP-Nagercoil Campus",
+                    link: "https://sravan9116.github.io/AVVP-Nagercoil/",
+                    description: "A project showcasing the AVVP-Nagercoil campus details and features."
+                },
+                {
+                    number: 2,
+                    name: "Hotel Menu Card",
+                    link: "#",
+                    description: "A project based on designing an interactive hotel menu card."
+                }
+            ];
+
+            const tableBody = document.getElementById("projects-table-body");
+
+            projects.forEach(project => {
+                const row = document.createElement("tr");
+
+                row.innerHTML = `
+                            <td>${project.number}</td>
+                            <td>${project.name}</td>
+                            <td><a href="${project.link}" target="_blank" rel="noopener noreferrer">Visit Project &rarr;</a></td>
+                            <td>${project.description}</td>
+                        `;
+
+                tableBody.appendChild(row);
+            });
+        });
+    </script>
+
+    <script>
+        window.addEventListener("load", function () {
+            document.querySelector(".loader-wrapper").style.display = "none";
+            document.getElementById("content").style.display = "block";
+        });
+    </script>
+</body>
+
+</html>
