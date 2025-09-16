@@ -1,3 +1,7 @@
+* {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin: 0;
@@ -339,6 +343,14 @@ footer {
     border-radius: 14px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
     animation: fadeInUp 1s ease-in-out;
+    position: relative;
+    width: 60%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+
 }
 
 #hackthon h2 {
@@ -482,6 +494,13 @@ footer {
     border-radius: 14px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
     animation: fadeInUp 1s ease-in-out;
+    position: relative;
+    width: 60%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
 }
 
 #achievements h2 {
@@ -579,13 +598,7 @@ footer {
     }
 }
 
-/* ========== BASE STYLES (Already Good) ========== */
-/* (keeping your existing code unchanged above) */
 
-
-/* ========== RESPONSIVE STYLING ========== */
-
-/* Large Laptops & Desktops (1200px and above) */
 @media (min-width: 1200px) {
 
     #hackthon,
