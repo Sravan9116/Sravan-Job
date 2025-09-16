@@ -331,3 +331,375 @@ footer {
     border-radius: 5%;
     font-family: cursive;
 }
+
+/* Section Styling */
+#hackthon {
+    padding: 60px 10%;
+    background: linear-gradient(135deg, #fdfbfb, #ebedee);
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-in-out;
+}
+
+#hackthon h2 {
+    font-size: 2rem;
+    text-align: center;
+    color: #86153b;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+#hackthon h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #86153b;
+    margin: 10px auto 0;
+    border-radius: 4px;
+    animation: growLine 1s ease-in-out forwards;
+}
+
+#hackthon p {
+    text-align: center;
+    color: #555;
+    font-size: 1.05rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* Grid Layout for Entries */
+.hackathon-entries {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* Individual Entry */
+.hackathon-entry {
+    background: #fff;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(134, 21, 59, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: slideUp 0.8s ease both;
+    position: relative;
+    overflow: hidden;
+}
+
+.hackathon-entry:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 28px rgba(134, 21, 59, 0.25);
+}
+
+.hackathon-entry h4 {
+    margin-bottom: 10px;
+    color: #86153b;
+    font-size: 1.3rem;
+    text-align: center;
+    position: relative;
+}
+
+/* Image Styling */
+.hackathon-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+/* Hover Zoom */
+.hackathon-image:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+/* Hover Overlay Effect */
+.hackathon-entry::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(134, 21, 59, 0.2), rgba(0, 0, 0, 0.2));
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    border-radius: inherit;
+}
+
+.hackathon-entry:hover::before {
+    opacity: 1;
+}
+
+/* Paragraph */
+.hackathon-entry p {
+    color: #444;
+    font-size: 0.95rem;
+    text-align: center;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes growLine {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 80px;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#achievements {
+    padding: 60px 10%;
+    background: linear-gradient(135deg, #fff, #f7f7f7);
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    animation: fadeInUp 1s ease-in-out;
+}
+
+#achievements h2 {
+    font-size: 2rem;
+    text-align: center;
+    color: #86153b;
+    margin-bottom: 10px;
+}
+
+#achievements hr {
+    width: 80px;
+    height: 4px;
+    background: #86153b;
+    margin: 10px auto 30px;
+    border: none;
+    border-radius: 4px;
+    animation: growLine 1s ease-in-out forwards;
+}
+
+.achievement-entries {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* Individual Card */
+.achievement-entry {
+    background: #fff;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(134, 21, 59, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.achievement-entry:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 28px rgba(134, 21, 59, 0.25);
+}
+
+/* Titles */
+.achievement-entry h4 {
+    margin-bottom: 10px;
+    color: #86153b;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+/* Images */
+.achievement-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    margin: 8px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.achievement-image:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+/* Paragraphs */
+.achievement-entry p {
+    color: #444;
+    font-size: 0.95rem;
+    text-align: center;
+    line-height: 1.5;
+    margin-top: 8px;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes growLine {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 80px;
+    }
+}
+
+/* ========== BASE STYLES (Already Good) ========== */
+/* (keeping your existing code unchanged above) */
+
+
+/* ========== RESPONSIVE STYLING ========== */
+
+/* Large Laptops & Desktops (1200px and above) */
+@media (min-width: 1200px) {
+
+    #hackthon,
+    #achievements {
+        padding: 80px 15%;
+    }
+
+    .hackathon-entry,
+    .achievement-entry {
+        padding: 30px;
+    }
+
+    .hackathon-entry h4,
+    .achievement-entry h4 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Tablets & Small Laptops (768px – 1199px) */
+@media (max-width: 1199px) {
+
+    #hackthon,
+    #achievements {
+        padding: 50px 8%;
+    }
+
+    .hackathon-entries,
+    .achievement-entries {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+    }
+
+    #hackthon h2,
+    #achievements h2 {
+        font-size: 1.8rem;
+    }
+
+    .hackathon-entry h4,
+    .achievement-entry h4 {
+        font-size: 1.2rem;
+    }
+
+    .hackathon-image,
+    .achievement-image {
+        height: 160px;
+    }
+}
+
+/* Mobile Devices (up to 767px) */
+@media (max-width: 767px) {
+
+    #hackthon,
+    #achievements {
+        padding: 40px 5%;
+        border-radius: 0;
+        /* remove round edges for full-width look */
+    }
+
+    #hackthon h2,
+    #achievements h2 {
+        font-size: 1.5rem;
+    }
+
+    #hackthon p,
+    #achievements p {
+        font-size: 0.95rem;
+    }
+
+    .hackathon-entries,
+    .achievement-entries {
+        grid-template-columns: 1fr;
+        /* single column */
+        gap: 20px;
+    }
+
+    .hackathon-entry,
+    .achievement-entry {
+        padding: 15px;
+    }
+
+    .hackathon-image,
+    .achievement-image {
+        height: auto;
+        max-height: 200px;
+    }
+
+    .hackathon-entry h4,
+    .achievement-entry h4 {
+        font-size: 1.1rem;
+    }
+}
+
+/* Small Phones (up to 480px) */
+@media (max-width: 480px) {
+
+    #hackthon,
+    #achievements {
+        padding: 30px 4%;
+    }
+
+    #hackthon h2,
+    #achievements h2 {
+        font-size: 1.3rem;
+    }
+
+    .hackathon-image,
+    .achievement-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .hackathon-entry p,
+    .achievement-entry p {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+}
